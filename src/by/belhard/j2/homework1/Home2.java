@@ -10,4 +10,4 @@ public class Home2 {
         /*for (int i =1; i <= 15; i++){
             System.out.println("Это" + " " + i + "-я строка");}*/
     }
-}
+} 
