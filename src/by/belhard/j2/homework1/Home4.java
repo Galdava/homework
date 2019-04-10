@@ -4,16 +4,15 @@ public class Home4 {
     public static void main(String[] args) {
         for (int x= 1; x<10;x++) {
             for (int y= 1; y<10; y++){
+                if (x==1 && y==1){
+                    System.out.println("   ");
+                    continue;
+                }
                 System.out.printf("%4d",y*x );
             }
-            System.out.println(" ");
+            System.out.println();
 
 
-        /*int[] a = new int[]{2,3,4,5,6,7,8,9};
-        System.out.println("  " + 2  + " " + 3 + " " + 4 + " " + 5 + " " + 6 + " " + 7 + " "  + 8 + " " + 9 );
-
-        for (int x : a) {
-            System.out.println(x+ " " + x*2 + " " + x*3 + " " + x*4 + " " + x*5 + " " + x*6 + " " + x*7 + " " + x*8 + " " + x*9) ;*/
 
         }
 
