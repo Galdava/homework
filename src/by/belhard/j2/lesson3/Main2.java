@@ -9,7 +9,7 @@ public class Main2 {
 
     }
 
-        private String newMethod (int a,int b) {
+        private static String newMethod (int a,int b) {
         if(a==b)
             return "equal";
         System.out.printf("a=%d, b=%d\n",a,b);
