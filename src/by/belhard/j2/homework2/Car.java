@@ -17,10 +17,12 @@ public class Car {
 
     public void toMove(double x, double y) {
         double a;
-        a = Math.sqrt((this.x * this.x) + (this.y * this.y));
-        km =this.km + Math.sqrt((x * x) + (y * y)) - a;
-        this.x=x;
-        this.y=y;
+        double b;
+        a = x - this.x;
+        b = y - this.y;
+        km = this.km + Math.sqrt((a*a) + (b*b)) ;
+        this.x = x;
+        this.y = y;
 
 
         //        x=(55.75222);
