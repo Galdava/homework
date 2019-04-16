@@ -19,6 +19,8 @@ public class Car {
         double a;
         a = Math.sqrt((this.x * this.x) + (this.y * this.y));
         km =this.km + Math.sqrt((x * x) + (y * y)) - a;
+        this.x=x;
+        this.y=y;
 
 
         //        x=(55.75222);
