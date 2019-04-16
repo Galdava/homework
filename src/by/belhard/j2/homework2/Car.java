@@ -5,19 +5,28 @@ public class Car {
     private String name;
     private double x;
     private double y;
+    private double km;
 
 
-    public Car(String name, double x, double y) {
+    public Car(String name, double x, double y, double km) {
         this.name = name;
         this.x = x;
         this.y = y;
+        this.km = km;
     }
 
-    public void toMove() {
-        double x = 55.7522;
-        double y = 37.6156;
-        System.out.println("car move to x=" + x + " " + "y=" + y);
+    public void toMove(double x, double y) {
+        double a;
+        a = Math.sqrt((this.x * this.x) + (this.y * this.y));
+        km =this.km + Math.sqrt((x * x) + (y * y)) - a;
+
+
+        //        x=(55.75222);
+        //        y=(37.61556);
+
+
     }
+
 
     public String getName() {
         return name;
@@ -43,12 +52,21 @@ public class Car {
         this.y = y;
     }
 
+    public double getKm() {
+        return km;
+    }
+
+    public void setKm(double km) {
+        this.km = km;
+    }
+
     @Override
     public String toString() {
         return "Car{" +
                 "name='" + name + '\'' +
                 ", x=" + x +
                 ", y=" + y +
+                ", distance=" + km +
                 '}';
     }
 }
