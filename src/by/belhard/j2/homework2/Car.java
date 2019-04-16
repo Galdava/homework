@@ -14,7 +14,9 @@ public class Car {
     }
 
     public void toMove() {
-        System.out.println("car move from x=" + x + " " + "y=" + y);
+        double x = 55.7522;
+        double y = 37.6156;
+        System.out.println("car move to x=" + x + " " + "y=" + y);
     }
 
     public String getName() {
