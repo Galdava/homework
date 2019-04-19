@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-       /* List<String> list = new LinkedList<>();
+     /*   List<String> list = new LinkedList<>();
         list.add("one");
         list.add("two");
         list.add("three");
@@ -16,12 +16,16 @@ public class Main {
         list.add("one");
         list.add("one");
         list.add("one");
+        list.get(1);
+        String s = list.get(1);
+        System.out.println(s);
 
 
 
         System.out.println(list);
         System.out.println(list.size() + " " + list.isEmpty());
         System.out.println("contains 'two' : " + contains);*/
+/*
 
         Set<String> set = new HashSet<>();
         set.add("one");
@@ -36,6 +40,25 @@ public class Main {
 
         }
         System.out.println(set);
+*/
+        Map<String,  Car> map = new HashMap<>();
+        map.put("audi",new  Car ("audi"));
+        map.put("opel",new  Car ("opel corsa"));
+        map.put("zaz",new  Car ("mersedes"));
+
+        Car audi = map.get("audi");
+        Car vaz = map.get("vaz");
+        map.put("zaz", new Car("zaparozhets"));
+        //Car opel = map.remove("opel");
+        map.remove("opel",new Car("opel2"));
+        System.out.println(audi);
+        System.out.println(vaz);
+        System.out.println(map.get("zaz").hashCode());
+        System.out.println(map.get("opel"));
+
+
+
+
 
     }
 }
