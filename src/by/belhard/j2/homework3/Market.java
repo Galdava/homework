@@ -12,7 +12,14 @@ public class Market {
         product.put("forA1",new ForAnimals("forA1",15));
         product.put("prod2",new Prod("prod2",30));
 
-        Map<String,Product> cart = new HashMap<>();
+        Map<String,Product> cart =new HashMap<>();
+        cart.put("cart1" ,product.get("prom1"));
+        cart.put("cart2",product.get("prom1"));
+        cart.put("cart3",product.get("prod1"));
+        System.out.println(cart.values());
+
+
+
 
     }
 
