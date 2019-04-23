@@ -1,7 +1,9 @@
 package by.belhard.j2.homework3;
 
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class Market {
@@ -12,11 +14,19 @@ public class Market {
         product.put("forA1",new ForAnimals("forA1",15));
         product.put("prod2",new Prod("prod2",30));
 
+
+
+
+
         Map<String,Product> cart =new HashMap<>();
         cart.put("cart1" ,product.get("prom1"));
         cart.put("cart2",product.get("prom1"));
         cart.put("cart3",product.get("prod1"));
         System.out.println(cart.values());
+        for (Map.Entry<String,Product> entry: cart.entrySet())
+            System.out.println(entry.getValue());
+
+
 
 
 
