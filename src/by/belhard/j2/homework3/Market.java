@@ -12,5 +12,10 @@ public class Market {
         product.put("forA1",new ForAnimals("forA1",15));
         product.put("prod2",new Prod("prod2",30));
 
+        Map<String,Product> cart = new HashMap<>();
+
     }
+
+
+
 }
