@@ -6,7 +6,7 @@ public interface Workable {
     default void exapleDefaultM(){
 
     }
-    private static void examplePrivate(){
+     static void examplePrivate(){
 
     }
 }
