@@ -25,6 +25,14 @@ public class Market {
         System.out.println(cart.values());
         for (Map.Entry<String,Product> entry: cart.entrySet())
             System.out.println(entry.getValue());
+        Iterator  <Map.Entry<String ,Product> > itr = cart.entrySet().iterator();
+            while (itr.hasNext())
+                System.out.println("Full price="+(itr.next().getValue().getPrice()+ itr.next().getValue().getPrice()));
+
+
+
+
+
 
 
 
