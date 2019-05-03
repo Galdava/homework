@@ -55,7 +55,7 @@ public class ATM {
                     System.out.println("Введите желаемую сумму");
                     double ss = sc.nextDouble();
                     System.out.println("Итого");
-                    b.minusBalance(s2, ss);
+                    b.addBalance(s2, -ss);
                 } else System.out.println("Неправильный пинкод");
                 break;
             case 4:

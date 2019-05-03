@@ -28,17 +28,17 @@ public class Banking {
     }
 
 
+//
+//    public void minusBalance(int x, double y){
+//        int name1 = accs.get(x).getName();
+//        int pass1 = accs.get(x).getPass();
+//        double a = accs.get(x).getMoney();
+//        double sum = a - y;
+//        addAcc(name1,pass1,sum);
+//        Account i = accs.get(x);
+//        System.out.println(i);
 
-    public void minusBalance(int x, double y){
-        int name1 = accs.get(x).getName();
-        int pass1 = accs.get(x).getPass();
-        double a = accs.get(x).getMoney();
-        double sum = a - y;
-        addAcc(name1,pass1,sum);
-        Account i = accs.get(x);
-        System.out.println(i);
-
-    }
+//    }
     public void transfer (int a, int b, double y){
         int name1 = accs.get(a).getName();
         int pass1 = accs.get(a).getPass();

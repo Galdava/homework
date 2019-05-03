@@ -1,6 +1,5 @@
 package by.belhard.j2.lesson8.l3;
 
-import javax.xml.bind.SchemaOutputResolver;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
