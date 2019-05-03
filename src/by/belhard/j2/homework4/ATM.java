@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class ATM {
-    Scanner sc = new Scanner(System.in);
+
 
     public static void startWork() {
         Scanner sc = new Scanner(System.in);
@@ -63,7 +63,7 @@ public class ATM {
                 int s3 = sc.nextInt();
                 System.out.println("Введите номер счёта на который зачисляют деньги");
                 int s03 = sc.nextInt();
-                System.out.println("Введите пинкод 1");
+                System.out.println("Введите пинкод счета 1");
                 int p3 = sc.nextInt();
                 int ps3 = b.checkPass(s3);
                 if (p3 == ps3) {
