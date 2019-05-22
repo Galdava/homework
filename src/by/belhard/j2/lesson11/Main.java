@@ -41,6 +41,13 @@ public class Main {
 
                 System.out.printf("%-2d) %-10s %-10s %5d  %5$td/%5$tm/%5$tY\n", id, name, specialty, salary, date);
             }
+           // query= "update employees set (salary =salary + ?) where salary < ?;";
+            PreparedStatement preparedStatement = connection.prepareStatement("update employees set (salary =salary + ?) where salary < ?;");
+
+            preparedStatement.setInt(1,100);
+
+            preparedStatement.setInt(2,1000);
+
 
         }catch(SQLException e){
             e.printStackTrace();
