@@ -9,10 +9,11 @@ public class ATM {
     public static void startWork() {
         Scanner sc = new Scanner(System.in);
         Banking b = new Banking();
-        b.addAcc(1, 7777, 300);
-        b.addAcc(2, 7787, 300);
-        b.addAcc(4, 7778, 300);
-        b.addAcc(3, 7877, 300);
+
+        //        b.addAcc(1, 7777, 300);
+//        b.addAcc(2, 7787, 300);
+//        b.addAcc(4, 7778, 300);
+//        b.addAcc(3, 7877, 300);
 
         System.out.println("1.Данные о счёте" + '\n' + "2.Пополнить счёт" + '\n' + "3.Снять деньги со счёта" + '\n' + "4.Перевод");
         int x = sc.nextInt();

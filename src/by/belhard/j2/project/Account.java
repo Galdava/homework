@@ -1,4 +1,4 @@
-package by.belhard.j2.homework4;
+package by.belhard.j2.project;
 
 public class Account {
     private int id;
@@ -14,11 +14,6 @@ public class Account {
     }
 
 
-    //    public Account(int name, int pass, double money) {
-//        this.name = name;
-//        this.pass = pass;
-//        this.money = money;
-//    }
 
     public int getId() {
         return id;
@@ -49,6 +44,5 @@ public class Account {
                 ", Баланс=" + money +
                 '}';
     }
-
 
 }
