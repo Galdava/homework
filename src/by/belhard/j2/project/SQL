@@ -3,9 +3,9 @@ use bank;
 create table account (
 	id int auto_increment primary key,
     name varchar(45) not null,
-    pass int(4) not null,
+    pass int(4) not null default 7777,
     money double not null default 0
 );
-insert into account values (null, 'name9', 7777,default);
+insert into account values (null, 'name1', 7777,default),(null, 'name2', 7777,default)(null, 'name3', 7777,default),(null, 'name4', 7777,default),(null, 'name5', 7777,default),(null, 'name6', 7777,default),(null, 'name7', 7777,default),(null, 'name8', 7777,default),(null, 'name9', 7777,default);
 
 select * from account  ;

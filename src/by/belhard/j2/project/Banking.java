@@ -16,7 +16,6 @@ public class Banking {
     Connection connection;
     PreparedStatement preparedStatement;
     ResultSet resultSet;
-    List<Account> accs = new ArrayList<>();
 
 
     public void checkAcc(int x) {
@@ -51,7 +50,6 @@ public class Banking {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection
                     .prepareStatement("select pass from account  where id = ?;");
-//            String query = "select pass from account  where id = ?;";
             preparedStatement.setInt(1, id);
             resultSet = preparedStatement.executeQuery();
 
@@ -71,25 +69,24 @@ public class Banking {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection
                     .prepareStatement("update account set money = money + ? where id = ?;");
-//            String query = "select pass from account  where id = ?;";
             preparedStatement.setInt(2, x);
             preparedStatement.setDouble(1, y);
             preparedStatement.executeUpdate();
 
-//            preparedStatement = connection
-//                    .prepareStatement("select * from account  where id = ?;");
-//            preparedStatement.setInt(1, x);
-//            resultSet = preparedStatement.executeUpdate();
-//
-//            resultSet.next();
-//            int id = resultSet.getInt("id");
-//            String name = resultSet.getString("name");
-//
-//            double money = resultSet.getDouble("money");
-//
-//
-//            Account acc = new Account(id, name, money);
-//            System.out.println(acc);
+            preparedStatement = connection
+                    .prepareStatement("select * from account  where id = ?;");
+            preparedStatement.setInt(1, x);
+            resultSet = preparedStatement.executeQuery();
+
+            resultSet.next();
+            int id = resultSet.getInt("id");
+            String name = resultSet.getString("name");
+
+            double money = resultSet.getDouble("money");
+
+
+            Account acc = new Account(id, name, money);
+            System.out.println(acc);
 
 
         } catch (SQLException e) {
@@ -100,21 +97,59 @@ public class Banking {
     }
 
     public void transfer(int a, int b, double y) {
-        System.out.println("poka ne sdelal");
-//        int name1 = accs.get(a).getName();
-//        int pass1 = accs.get(a).getPass();
-//        double s = accs.get(a).getMoney();
-//        int name2 = accs.get(b).getName();
-//        int pass2 = accs.get(b).getName();
-//        double s2 = accs.get(b).getMoney();
-//        double sum = s - y;
-//        double sum2 = s2 + y;
-//        addAcc(name1, pass1, sum);
-//        addAcc(name2, pass2, sum2);
-//        Account i = accs.get(a);
-//        System.out.println(i);
-////        Account i2 = accs.get(b);
-////        System.out.println(i+"\n"+ i2);
+        try {
+            connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            preparedStatement = connection
+                    .prepareStatement("update account set money = money - ? where id = ?;");
+            preparedStatement.setInt(2, a);
+            preparedStatement.setDouble(1, y);
+            preparedStatement.executeUpdate();
+            preparedStatement = connection
+                    .prepareStatement("update account set money = money + ? where id = ?;");
+            preparedStatement.setInt(2, b);
+
+            preparedStatement.setDouble(1, y);
+            preparedStatement.executeUpdate();
+
+            preparedStatement = connection
+                    .prepareStatement("select * from account  where id = ?;");
+            preparedStatement.setInt(1, a);
+            resultSet = preparedStatement.executeQuery();
+
+            resultSet.next();
+            int id = resultSet.getInt("id");
+            String name = resultSet.getString("name");
+
+            double money = resultSet.getDouble("money");
+
+
+            Account acc = new Account(id, name, money);
+            System.out.println(acc);
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+    public Integer checkMoney(int id){
+        int cash = -1;
+        try {
+            connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            preparedStatement = connection
+                    .prepareStatement("select money from account  where id = ?;");
+            preparedStatement.setInt(1, id);
+            resultSet = preparedStatement.executeQuery();
+
+            resultSet.next();
+            cash = resultSet.getInt("money");
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return cash;
 
     }
 }
