@@ -13,7 +13,11 @@ public class Account {
         this.money = money;
     }
 
-
+    public Account(int id, String name, double money) {
+        this.id = id;
+        this.name = name;
+        this.money = money;
+    }
 
     public int getId() {
         return id;
@@ -42,7 +46,7 @@ public class Account {
                 "id=" + id +
                 ", Имя=" + name +
                 ", Баланс=" + money +
-                '}';
+                '}' + '\n';
     }
 
 }
