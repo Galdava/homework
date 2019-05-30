@@ -70,7 +70,7 @@ public class Banking {
         try {
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
             preparedStatement = connection
-                    .prepareStatement("update account (set money = money + ?) where id = ?;");
+                    .prepareStatement("update account set money = money + ? where id = ?;");
 //            String query = "select pass from account  where id = ?;";
             preparedStatement.setInt(2, x);
             preparedStatement.setDouble(1, y);
