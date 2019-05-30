@@ -48,8 +48,7 @@ public class Banking {
 
             Account acc = new Account(id, name,pass, money);
             accs.add(acc);
-                /*System.out.printf("%-2d) %-10s %-10s %5d  %5$td/%5$tm/%5$tY\n",
-                        id, name, specialty, salary, date);*/
+                /*System.out.printf("%-2d) %-10s %-10s %5d  %5$td/%5$tm/%5$tY\n",                        id, name, specialty, salary, date);*/
         }
 
 //            query = "update employees set (salary = salary + ?) where salary < ?;";

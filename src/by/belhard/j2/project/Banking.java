@@ -74,10 +74,12 @@ public class Banking {
 //            String query = "select pass from account  where id = ?;";
             preparedStatement.setInt(2, x);
             preparedStatement.setDouble(1, y);
+            preparedStatement.executeUpdate();
+
 //            preparedStatement = connection
 //                    .prepareStatement("select * from account  where id = ?;");
 //            preparedStatement.setInt(1, x);
-//            resultSet = preparedStatement.executeQuery();
+//            resultSet = preparedStatement.executeUpdate();
 //
 //            resultSet.next();
 //            int id = resultSet.getInt("id");
