@@ -14,14 +14,14 @@ public class Banking {
     private static final String URL =
             "jdbc:mysql://localhost:3306/company?serverTimezone=UTC";
 
-//    public static void main(String[] args) {
+    public static void main(String[] args) {
 
-//        try {
-//            Class.forName(DRIVER_NAME);
-//        } catch (ClassNotFoundException e) {
-//            System.err.println(DRIVER_NAME + " loading failure");
-//            return;
-//        }
+        try {
+            Class.forName(DRIVER_NAME);
+        } catch (ClassNotFoundException e) {
+            System.err.println(DRIVER_NAME + " loading failure");
+            return;
+        }
 
         Connection connection;
         List<Account> accs = new ArrayList<>();
