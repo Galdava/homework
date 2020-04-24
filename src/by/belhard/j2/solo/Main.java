@@ -15,7 +15,7 @@ public class Main {
         bDay = Integer.parseInt(userData);
         userAge = yearNow - yearBorn - bDay;
 
-        JOptionPane.showMessageDialog(null,"Tqveni asaki : " + userAge);
+        JOptionPane.showMessageDialog(null,"Tqveni asaki: " + userAge);
 
 
     }
